@@ -1,0 +1,9 @@
+body{
+    overflow-x: hidden;
+}
+.footer{
+    border-top: 2px solid #aeaeae;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

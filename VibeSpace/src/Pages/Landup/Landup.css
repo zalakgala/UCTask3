@@ -1,0 +1,52 @@
+.landupmain-container {
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #ffffee; */
+  display: flex;
+  animation: flyIn 2s forwards;
+}
+@keyframes flyIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.landing {
+  width: 40rem;
+}
+.card {
+  height: 30rem;
+  border-radius: 2rem;
+  background: linear-gradient(to bottom right, #00ffff, #ffff00);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+/* .button {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #ffffee;
+  border: 3px solid black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  color: black;
+} */
+.vs_img {
+  width: 30rem;
+  bottom: 6rem;
+}
+.tagline {
+  font-size: 1.5rem;
+  bottom: 9rem;
+  color: black;
+}
+button{
+    cursor: pointer;
+}
+.button:hover{
+    transform: translateY(-1rem);
+    transition: ease-in-out;
+    transition: 250ms;
+    scale: 1.2;
+}

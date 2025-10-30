@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Doremon",
+        "username": "doremon.21",
+        "avatar": "user1.png",
+        "bio": "I'm a CAT and ROBOT, not a RACOON !!"
+    },
+    {
+        "id": 2,
+        "name": "Nobi Nobita",
+        "username": "nobinobita",
+        "avatar": "user2.png",
+        "bio": "Chilling through life with gadgets I don’t know how to use."
+    },
+    {
+        "id": 3,
+        "name": "Suneo Honekawa",
+        "username": "iamsuneo",
+        "avatar": "user3.png",
+        "bio": "Net worth higher than Nobita's test scores."
+    },
+    {
+        "id": 4,
+        "name": "Takeshi Goda",
+        "username": "gian_006",
+        "avatar": "user4.png",
+        "bio": "Concerts held daily. Escaping is not an option."
+    },
+    {
+        "id": 5,
+        "name": "Shizuka Minamoto",
+        "username": "shizuuuuu",
+        "avatar": "user5.png",
+        "bio": "Please don’t teleport into my room. Thanks."
+    },
+    {
+        "id": 6,
+        "name": "Hidetoshi Dekisugi",
+        "username": "dekisugi.here",
+        "avatar": "user6.png",
+        "bio": "Finished homework you haven’t been assigned yet."
+    },
+    {
+        "id": 7,
+        "name": "Doremi",
+        "username": "_.doremi._",
+        "avatar": "user7.png",
+        "bio": "Warning: magic may cause unexpected explosions."
+    },
+    {
+        "id": 8,
+        "name": "Zalak Gala",
+        "username": "zalakgala06",
+        "avatar": "Me.jpg",
+        "bio": "College. Code. Coffee."
+    }
+]

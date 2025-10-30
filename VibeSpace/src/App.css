@@ -1,0 +1,71 @@
+html.light {
+  --bg-color: #ffffee;
+  --text-color: #000000;
+  --card-color: #ffffee;
+  --card-text: #000000;
+  --button-color: #ffffee;
+  --button-text: #000000;
+}
+
+html.dark {
+  --bg-color: #1d1d1d;
+  --text-color: #ffffee;
+  --card-color: #000000;
+  --card-text: #ffffee;
+  --button-color: #000000;
+  --button-text: #ffffee;
+}
+
+.loginbutton:hover {
+  scale: 1.05;
+  transition: all 250ms ease-in-out;
+  background-color: var(--button-color);
+  border: 2px solid var(--button-text);
+  color: var(--button-text);
+}
+.signupbutton:hover {
+  scale: 1.05;
+  transition: all 250ms ease-in-out;
+  background-color: var(--button-color);
+  border: 2px solid var(--button-text);
+  color: var(--button-text);
+}
+.button {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--button-color);
+  border: 3px solid var(--button-text);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  color: var(--button-text);
+}
+
+.heart, .comment{
+  stroke: var(--text-color);
+  fill: var(--text-color);
+}
+.form{
+  background-color: var(--card-color);
+  color: var(--card-text);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.themediv {
+  position: fixed;
+  width: fit-content;
+  left: 88rem;
+  margin-top: 1rem;
+  z-index: 1000000;
+}
+.theme {
+  position: relative;
+  padding: 0.5rem;
+  background-color: aqua;
+  color: black;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}

@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "user_id": 5,
+        "image": "post1.png",
+        "caption": "Violin lessons done right. #violin #music",
+        "likes": "8.3K likes",
+        "time": "2 hours ago",
+        "ccount": "30K comments",
+        "comments": [
+            {
+                "user": "dekisugi.here",
+                "text": "Lorem ipsum dolor sit amet consectetur."
+            },
+            {
+                "user": "nobinobita",
+                "text": "Lorem ipsum dolor sit amet."
+            },
+            {
+                "user": "doremon.21",
+                "text": "Lorem ipsum dolor sit amet."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "user_id": 1,
+        "image": "post2.png",
+        "caption": "Taking a break anywhere, anytime!! #anywheredoor #vacation",
+        "likes": "1.3M likes",
+        "time": "8 August 2025",
+        "ccount": "234.5K comments",
+        "comments": [
+            {
+                "user": "_.doremi._",
+                "text": "Lorem ipsum dolor sit amet."
+            },
+            {
+                "user": "nobinobita",
+                "text": "Lorem ipsum dolor sit amet."
+            },
+            {
+                "user": "iamsuneo",
+                "text": "Lorem ipsum dolor sit amet consectetur"
+            },
+            {
+                "user": "shizuuuuu",
+                "text": "Lorem ipsum dolor sit."
+            },
+            {
+                "user": "gian_006",
+                "text": "Lorem ipsum dolor sit amet."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "user_id": 3,
+        "image": "post3.png",
+        "caption": "My dad bought a new porsche... Let's go for a trip!! #richlife #newcar",
+        "likes": "23.3K likes",
+        "times": "2 days ago",
+        "ccount": "5233 comments",
+        "comments": [
+            {
+                "user": "gian_006",
+                "text": "Lorem ipsum dolor sit amet."
+            },
+            {
+                "user": "dekisugi.here",
+                "text": "Lorem ipsum dolor sit amet."
+            },
+            {
+                "user": "nobinobita",
+                "text": "Lorem ipsum dolor sit amet consectetur"
+            },
+            {
+                "user": "shizuuuuu",
+                "text": "Lorem ipsum dolor sit."
+            },
+            {
+                "user": "doremon.21",
+                "text": "Lorem ipsum dolor sit amet."
+            }
+        ]
+    }
+]

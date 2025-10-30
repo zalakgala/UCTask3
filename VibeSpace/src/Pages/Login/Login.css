@@ -1,0 +1,29 @@
+body{
+    /* background-color: #ffffee; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bluelink{
+    color: blue;
+}
+.logincard {
+  height: 30rem;
+  border-radius: 2rem;
+  background: linear-gradient(to bottom right, #00ffff, #ffff00);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+/* .loginbutton:hover{
+    scale: 1.05;
+    transition: ease-in-out;
+    transition: 250ms;
+    background-color: #ffffee;
+    border: 2px solid black;
+} */
+.form, .signup{
+    border: 0.1rem solid rgb(134, 134, 134);
+    width: 25rem;
+}
+.signup{
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}

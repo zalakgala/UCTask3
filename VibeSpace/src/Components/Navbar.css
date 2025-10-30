@@ -1,0 +1,21 @@
+.navbar{
+    border-right: 2px solid #aeaeae;
+    padding: 1rem;
+    position: fixed;
+}
+.navbarul{
+    gap: 1.86rem;
+}
+/* .icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+} */
+ .vs_logo{
+    background: linear-gradient(to bottom left, #00ffff, #ffff00);
+    border-radius: 1rem;
+    padding: 0.5rem;
+ }
+ li{
+    cursor: pointer;
+ }

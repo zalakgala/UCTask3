@@ -1,0 +1,42 @@
+.profile {
+  /* border-bottom: 2px solid #b9b9b9; */
+  width: 60rem;
+  margin: 2rem 3rem 1rem 5rem;
+  padding-bottom: 10rem;
+}
+.userimg {
+  border-radius: 50%;
+  width: 10rem;
+  border: 4px solid gray;
+}
+.userinfo {
+  font-size: larger;
+  cursor: pointer;
+}
+.name {
+  font-size: 1.125rem;
+  top: 2rem;
+}
+.bio {
+  top: 2rem;
+}
+.editbutton {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: #808080;
+  color: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  top: 4rem;
+  font-size: 1.25rem;
+}
+.postgrid{
+    border: 3px solid #b9b9b9;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.1rem;
+}
+.gridposts{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
