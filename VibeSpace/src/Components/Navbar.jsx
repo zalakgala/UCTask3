@@ -6,7 +6,9 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar flex flex-col items-center justify-center gap-10 h-fit">
-        <img src={VS} className="vs_logo w-3xs" />
+        <Link to="/home">
+          <img src={VS} className="vs_logo w-3xs" />
+        </Link>
         <ul className="navbarul flex flex-col font-medium">
           <Link to="/home">
             <li className="flex flex-row">

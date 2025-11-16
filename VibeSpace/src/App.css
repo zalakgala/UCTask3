@@ -57,14 +57,14 @@ body {
 .themediv {
   position: fixed;
   width: fit-content;
-  left: 88rem;
-  margin-top: 1rem;
+  right: 89rem;
+  top: 40rem;
   z-index: 1000000;
 }
 .theme {
   position: relative;
   padding: 0.5rem;
-  background-color: aqua;
+  background-color: #00ffee;
   color: black;
   border-radius: 0.5rem;
   font-weight: bold;
