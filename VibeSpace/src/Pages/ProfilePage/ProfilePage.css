@@ -29,14 +29,16 @@
   top: 4rem;
   font-size: 1.25rem;
 }
-.postgrid{
-    border: 3px solid #b9b9b9;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.1rem;
+.postgrid {
+  border: 5px solid #b9b9b9;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
 }
-.gridposts{
-    aspect-ratio: 1/1;
-    object-fit: cover;
+.gridposts {
+  width: 30rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 2px solid #b9b9b9;
 }

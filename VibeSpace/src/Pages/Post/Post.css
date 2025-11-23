@@ -25,7 +25,7 @@
   border-radius: 50%;
   margin: 0.5rem 0rem 1rem 0.5rem;
   bottom: 1rem;
-  
+  border: 2px solid black;
 }
 .postcap{
     margin: 1rem 0rem 0rem 1rem;
@@ -37,7 +37,6 @@
     left: 3rem; 
 }
 .follow{
-    color: blue;
     font-size: large;
     font-weight: bold;
     top: 1.2rem;

@@ -25,7 +25,7 @@ const Post1 = () => {
               <h3 className="username font-bold">
                 {users[posts[0].user_id - 1].username}
               </h3>
-              <span className="follow relative">Follow</span>
+              <span className="follow relative bluelink">Follow</span>
             </div>
             <div className="postcap flex flex-col">
               <div className="flex flex-row">

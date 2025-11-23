@@ -1,27 +1,42 @@
-.navbar{
-    border-right: 2px solid #aeaeae;
-    padding: 1rem;
-    position: fixed;
+.navbar {
+  border-right: 2px solid #aeaeae;
+  padding: 1rem;
+  position: fixed;
 }
-.navbarul{
-    gap: 1.86rem;
+.navbarul {
+  gap: 1.86rem;
 }
 /* .icon{
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 1rem;
 } */
- .vs_logo{
-    background: linear-gradient(to bottom left,  #005080, #00ffee);
-    border-radius: 1rem;
-    padding: 0.5rem;
- }
- li{
-    cursor: pointer;
- }
+.vs_logo {
+  background: linear-gradient(to bottom left, #872341, #ffcca8);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+li {
+  cursor: pointer;
+}
+.icon {
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.nav:hover {
+  transform-origin: center;
+  scale: 1.5;
+  transition: transform 1s ease-in-out;
+}
 
-.nav:hover{
-    transform-origin: center;
-    scale: 1.5;
-    transition: transform 1s ease-in-out;
+.menu ul {
+  z-index: 100;
+  position: fixed;
+  gap: 1rem;
+  padding: 2rem 5rem;
+  bottom: 5rem;
+  left: 1rem;
+  border: 0.1rem solid rgb(134, 134, 134);
+  border-radius: 1rem;
 }

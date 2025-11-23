@@ -147,7 +147,7 @@ const Signup = () => {
                 type="submit"
                 className="signupbutton bg-amber-400 relative px-4 py-2 rounded-lg text-xl justify-center items-center w-xs bottom-6"
               >
-                Sign Up
+                Register
               </button>
             </form>
             <div className="signup form rounded-lg">

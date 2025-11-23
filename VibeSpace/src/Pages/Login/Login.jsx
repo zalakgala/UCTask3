@@ -1,16 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 import React, { useState } from "react";
 import "./LoginTailwind.css";
 import "./Login.css";
 import VS from "../../assets/VibeSpace.png";
 import Influencer from "../../assets/Influencer.png";
 
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showpassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+  const [apiError, setApiError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const validate = () => {
@@ -31,12 +33,40 @@ const Login = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      navigate("/home");
-      setEmail("");
-      setPassword("");
+    setApiError("");
+    setLoading(true);
+
+    if (!validate()) return;
+
+    try {
+      const res = await fetch("https://task4-authdb.onrender.com/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        Cookies.set("token", data.token, { expires: 7 });
+        Cookies.set("email", email, { expires: 7 });
+
+        navigate("/home");
+
+        setEmail("");
+        setPassword("");
+      } else {
+        setApiError(data.message || "Invalid email or password");
+      }
+    } catch (error) {
+      setApiError("Unable to connect to server");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -46,12 +76,9 @@ const Login = () => {
         <div className="logincard border-4 flex flex-row gap-20 p-8 items-center justify-center">
           <div className="images flex flex-col justify-center items-center">
             <img src={VS} className="w-72"></img>
-            <img
-              src={Influencer}
-              className="h-80 rounded-3xl"
-            ></img>
+            <img src={Influencer} className="h-80 rounded-3xl"></img>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center">
             <form
               onSubmit={handleSubmit}
               className="form space-y-4 relative flex flex-col justify-center items-center p-6 rounded-lg"
@@ -95,6 +122,8 @@ const Login = () => {
                 )}
               </div>
 
+              {apiError && <p className="text-red-500 ">{apiError}</p>}
+              {loading && <div className="loading"></div>}
               <button
                 type="submit"
                 className="loginbutton bg-amber-400 relative px-4 py-2 rounded-lg text-xl justify-center items-center w-xs"
@@ -111,7 +140,12 @@ const Login = () => {
                 </a>
               </div>
             </form>
-            <div className="signup form rounded-lg">Don't have an account? {" "} <Link to="/signup" className="underline bluelink">Sign Up</Link></div>
+            <div className="signup form rounded-lg">
+              Don't have an account?{" "}
+              <Link to="/register" className="underline bluelink">
+                Register
+              </Link>
+            </div>
           </div>
         </div>
       </div>

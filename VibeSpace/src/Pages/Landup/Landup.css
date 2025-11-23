@@ -21,7 +21,7 @@
 .card {
   height: 30rem;
   border-radius: 2rem;
-  background: linear-gradient(to bottom right, #005080, #00ffee);
+  background: linear-gradient(to bottom right, #872341, #ffcca8);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 /* .button {

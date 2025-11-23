@@ -4,11 +4,12 @@ body{
 }
 .bluelink{
     color: blue;
+    cursor: pointer;
 }
 .logincard {
-  height: 30rem;
+  height: fit-content;
   border-radius: 2rem;
-  background: linear-gradient(to bottom right,  #005080, #00ffee);
+  background: linear-gradient(to bottom right,  #872341, #ffcca8);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 /* .loginbutton:hover{
@@ -20,7 +21,7 @@ body{
 } */
 .form, .signup{
     border: 0.1rem solid rgb(134, 134, 134);
-    width: 25rem;
+    width: fit-content;
 }
 .signup{
     text-align: center;

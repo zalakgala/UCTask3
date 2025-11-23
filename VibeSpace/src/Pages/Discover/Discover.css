@@ -2,22 +2,22 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.usercard{
-    border: 2px solid gray;
-    margin: 2rem;
-    border-radius: 1rem;
-    padding: 1rem
+.usercard {
+  border: 2px solid gray;
+  margin: 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
 }
-.followbutton{
-    background: linear-gradient(to bottom left,  #005080, #00ffee);
-    color: black;
-    padding: 0.5rem 4rem;
-    border-radius: 1rem;
-    font-size: large;
+.followbutton {
+  background: linear-gradient(to bottom left, #872341, #ffcca8);
+  color: black;
+  padding: 0.5rem 4rem;
+  border-radius: 1rem;
+  font-size: large;
 }
-.followbutton:hover{
-    scale: 1.1;
-    transition: ease-in-out;
-    transition: 250ms;
-    border: 2px solid black;
+.followbutton:hover {
+  scale: 1.1;
+  transition: ease-in-out;
+  transition: 250ms;
+  border: 2px solid black;
 }

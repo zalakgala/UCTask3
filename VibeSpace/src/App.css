@@ -48,10 +48,18 @@ html.dark {
   color: var(--card-text);
 }
 
+.menu ul{
+  background-color: var(--bg-color);
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.useravatar, .smalluseravatar{
+  border: 2px solid var(--text-color);
 }
 
 .themediv {
@@ -64,8 +72,7 @@ body {
 .theme {
   position: relative;
   padding: 0.5rem;
-  background-color: #00ffee;
-  color: black;
+  background-color: #9f3353;
   border-radius: 0.5rem;
   font-weight: bold;
 }

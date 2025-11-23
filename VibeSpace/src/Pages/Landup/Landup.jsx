@@ -16,8 +16,11 @@ const Landup = () => {
             <Link to="/login" className="button relative text-2xl font-bold">
               Login
             </Link>
-            <Link to="/signup" className="button relative text-2xl font-bold">
+            {/* <Link to="/signup" className="button relative text-2xl font-bold">
               Sign Up
+            </Link> */}
+            <Link to="/register" className="button relative text-2xl font-bold">
+              Register
             </Link>
           </div>
         </div>

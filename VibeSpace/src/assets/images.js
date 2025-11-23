@@ -5,6 +5,7 @@ import User4 from "./user4.png";
 import User5 from "./user5.png";
 import User6 from "./user6.png";
 import User7 from "./user7.png";
+import User8 from "./user8.png";
 import Post1 from "./post1.png";
 import Post2 from "./post2.png";
 import Post3 from "./post3.png";
@@ -18,6 +19,7 @@ export const usericons = {
   "user5.png": User5,
   "user6.png": User6,
   "user7.png": User7,
+  "user8.png": User8,
 };
 
 export const postimg = {

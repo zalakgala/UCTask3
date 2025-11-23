@@ -11,7 +11,6 @@ const Footer = () => {
           <li className="hover:underline">Help</li>
           <li className="hover:underline">Privacy</li>
           <li className="hover:underline">Terms & Conditions</li>
-          {/* <li className="hover:underline">Locations</li> */}
           <li className="hover:underline">Contact</li>
         </ul>
         <div className="flex justify-center text-sm text-gray-500 pt-4">

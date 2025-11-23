@@ -1,0 +1,32 @@
+.create {
+  border: 2px solid rgb(170, 170, 170);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.postbtn {
+  border: 2px solid rgb(170, 170, 170);
+  border-radius: 0.5rem;
+  padding: 0.3rem 8rem;
+  margin-top: 2rem;
+  font-size: larger;
+  cursor: "pointer";
+  /* color: black; */
+  background-color: #9f3353;
+  font-weight: bold;
+}
+
+.addphoto{
+  display: none;
+}
+.addimg{
+  border: 2px solid rgb(170, 170, 170);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: larger;
+  cursor: "pointer";
+  background-color: #9f3353;
+  /* color: black; */
+  font-weight: bold;
+}

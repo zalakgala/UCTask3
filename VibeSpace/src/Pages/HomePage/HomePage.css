@@ -18,7 +18,7 @@
   margin: 1rem 3rem 1rem 5rem;
 }
 .story {
-  background: linear-gradient(to bottom left,  #005080, #00ffee);
+  background: linear-gradient(to bottom left, #872341, #ffcca8);
   border-radius: 50%;
   width: 5.5rem;
   height: 5.5rem;
@@ -58,14 +58,20 @@
   bottom: 0.1rem;
   right: 1rem;
 }
-.heart {
-  width: 3.5rem;
-  height: 3.5rem;
+.hearticon {
+  width: 2.2rem;
+  height: 2.5rem;
+  margin: 0.2rem;
 }
-
+.commenticon {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.2rem;
+}
 .like {
   margin: 0.5rem;
   font-size: small;
+  bottom: 1rem;
 }
 .caption {
   margin: 0rem 0rem 0rem 0.5rem;
