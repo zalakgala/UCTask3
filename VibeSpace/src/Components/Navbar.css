@@ -19,3 +19,9 @@
  li{
     cursor: pointer;
  }
+
+.nav:hover{
+    transform-origin: center;
+    scale: 1.5;
+    transition: transform 1s ease-in-out;
+}
