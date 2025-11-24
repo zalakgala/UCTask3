@@ -1,23 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import "./ProfilePage.css";
 import Cookies from "js-cookie";
 import userimg from "../../Data/users.json";
-import { usericons, me as meImg } from "../../assets/images";
+import { usericons } from "../../assets/images";
 
 const ProfilePage = () => {
   const [me, setMe] = useState(null);
   const [users, setUsers] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const token = Cookies.get("token");
     const email = Cookies.get("email");
 
-    if (!token || !email) {
-      navigate("/login");
-      return;
-    }
     async function getUsers() {
       if (!email) {
         console.log("No email found, redirect to login");
@@ -37,24 +31,25 @@ const ProfilePage = () => {
           throw new Error("Users array not found in response");
         }
 
-        setUsers(data.users);
+        const usersWithAvatars = data.users.map((user, idx) => {
+          const avatarFilename = `user${idx + 1}.png`;
+          return {
+            ...user,
+            avatar: avatarFilename,
+          };
+        });
+        setUsers(usersWithAvatars);
 
-        const loggedUser = data.users.find((user) => user.email === email);
-
-        if (!loggedUser) {
-          console.log("User not found, redirect to login if needed");
-          return;
-        }
-
+        const loggedUser = usersWithAvatars.find(
+          (user) => user.email === email
+        );
         setMe(loggedUser);
-
-        console.log("Logged-in user data:", loggedUser);
       } catch (err) {
         console.error("Error fetching users:", err);
       }
     }
     getUsers();
-  }, [navigate]);
+  }, []);
 
   if (!me || users.length === 0) {
     return null;
@@ -65,7 +60,7 @@ const ProfilePage = () => {
       <div className="content">
         <div className="profile flex flex-row justify-center relative top-4 left-10 gap-20">
           <div>
-            <img src={meImg} className="userimg relative" />
+            <img src={usericons[me.avatar]} className="userimg relative" />
           </div>
           <div className="flex flex-col relative">
             <div className="text-2xl font-bold">{me.name}</div>

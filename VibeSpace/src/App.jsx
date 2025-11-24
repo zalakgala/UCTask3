@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import "./AppTailwind.css";
 import { useState, useEffect } from "react";
+import ProtectedRoute from "./Routing/ProtectedRoute";
 import Landup from "./Pages/Landup/Landup";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
@@ -45,14 +46,16 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           {/* <Route path="/signup" element={<Signup />} /> */}
-          <Route element={<PagesWithNavbar />}>
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/post1" element={<Post1 />} />
-            <Route path="/post2" element={<Post2 />} />
-            <Route path="/post3" element={<Post3 />} />
-            <Route path="/discover" element={<Discover />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/create" element={<Create />} />
+          <Route element={<ProtectedRoute />}>
+            <Route element={<PagesWithNavbar />}>
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/post1" element={<Post1 />} />
+              <Route path="/post2" element={<Post2 />} />
+              <Route path="/post3" element={<Post3 />} />
+              <Route path="/discover" element={<Discover />} />
+              <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/create" element={<Create />} />
+            </Route>
           </Route>
         </Routes>
       </Router>

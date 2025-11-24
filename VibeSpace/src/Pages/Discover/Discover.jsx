@@ -13,10 +13,6 @@ const Discover = () => {
     const token = Cookies.get("token");
     const email = Cookies.get("email");
 
-    if (!token || !email) {
-      navigate("/login");
-      return;
-    }
     async function getUsers() {
       if (!email) {
         console.log("No email found, redirect to login");

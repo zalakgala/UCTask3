@@ -1,26 +1,21 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
 import "./HomePage.css";
 import posts from "../../Data/post.json";
-import { usericons, postimg, me as meImg } from "../../assets/images";
+import { usericons, postimg } from "../../assets/images";
 
 const HomePage = () => {
   const [likedPosts, setLikedPosts] = useState({});
   const [me, setMe] = useState(null);
   const [users, setUsers] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const token = Cookies.get("token");
     const email = Cookies.get("email");
 
-    if (!token || !email) {
-      navigate("/login");
-      return;
-    }
     async function getUsers() {
       if (!email) {
         console.log("No email found, redirect to login");
@@ -40,10 +35,6 @@ const HomePage = () => {
           throw new Error("Users array not found in response");
         }
 
-        const loggedUser = data.users.find((user) => user.email === email);
-
-        setMe(loggedUser);
-
         const usersWithAvatars = data.users.map((user, idx) => {
           const avatarFilename = `user${idx + 1}.png`;
           return {
@@ -51,15 +42,18 @@ const HomePage = () => {
             avatar: avatarFilename,
           };
         });
-
         setUsers(usersWithAvatars);
 
+        const loggedUser = usersWithAvatars.find(
+          (user) => user.email === email
+        );
+        setMe(loggedUser);
       } catch (err) {
         console.error("Error fetching users:", err);
       }
     }
     getUsers();
-  }, [navigate]);
+  }, []);
 
   const toggleLike = (postId) => {
     setLikedPosts((prev) => ({
@@ -82,7 +76,7 @@ const HomePage = () => {
             {users
               .filter((user) => user._id !== me._id)
               .slice(0, 6)
-              .map((user, ) => (
+              .map((user) => (
                 <div key={user._id} className="flex flex-col items-center">
                   <img src={usericons[user.avatar]} className="story" />
                   {user.name}
@@ -100,9 +94,7 @@ const HomePage = () => {
                     src={usericons[postUser.avatar]}
                     className="useravatar"
                   />
-                  <h3 className="username font-bold">
-                    {postUser.name}
-                  </h3>
+                  <h3 className="username font-bold">{postUser.name}</h3>
                 </div>
                 <div>
                   <Link to={`/post${post.id}`}>
@@ -130,9 +122,7 @@ const HomePage = () => {
                   {post.ccount}
                 </div>
                 <div className="caption relative bottom-6">
-                  <span className="font-bold">
-                    {postUser.name}
-                  </span>{" "}
+                  <span className="font-bold">{postUser.name}</span>{" "}
                   {post.caption}
                 </div>
                 <div className="time relative bottom-6 text-sm text-gray-500">
@@ -145,7 +135,7 @@ const HomePage = () => {
         <div className="profsection relative">
           <div className="flex flex-row items-center">
             <Link to="/profile">
-              <img src={meImg} className="profphoto" />
+              <img src={usericons[me.avatar]} className="profphoto" />
             </Link>
             <div>
               <Link to="/profile">
